@@ -21,7 +21,7 @@ class Snake:
     def add_seg(self, pos):
         snake_seg = Turtle("square")
         snake_seg.color("white")
-        snake_seg.shapesize(.75, .75)
+        snake_seg.shapesize(0.75, 0.75)
         snake_seg.penup()
         snake_seg.goto(pos)
         self.segments.append(snake_seg)
@@ -52,3 +52,5 @@ class Snake:
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
+
+

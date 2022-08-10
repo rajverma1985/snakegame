@@ -22,4 +22,13 @@ class ScoreBoard(Turtle):
         self.goto(0, 0)
         self.write(f"GAME OVER", False, font=('Courier', 20, 'bold'), align="center")
 
+    def restart(self):
+        self.goto(-220, 280)
+        self.write(f"RESTART GAME", False, font=('Courier', 20, 'bold'), align="center")
+
+    def exit(self):
+        self.goto(250, 280)
+        self.write(f"EXIT", False, font=('Courier', 20, 'bold'), align="center")
+
+
 
