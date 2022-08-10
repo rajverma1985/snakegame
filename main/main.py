@@ -34,11 +34,19 @@ while game_on:
     screen.update()
     time.sleep(0.1)
     snake.move_snake()
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+    if snake.head.xcor() > 295 or snake.head.xcor() < -295 or snake.head.ycor() > 295 or snake.head.ycor() < -295:
         game_on = False
         score.game_over()
     elif snake.head.distance(dot) < 15:
-        score.keep_score()
         dot.move()
+        snake.extend_seg()
+        score.keep_score()
+    # collision detection with tail
+    for segs in snake.segments:
+        if segs == snake.head:
+            pass
+        elif snake.head.distance(segs) < 10:
+            game_on = False
+            score.game_over()
 
 screen.exitonclick()
