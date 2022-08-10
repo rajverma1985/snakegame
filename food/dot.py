@@ -15,3 +15,5 @@ class Dot(Turtle):
     def move(self):
         x, y = random.randint(-280, 280), random.randint(-280, 280)
         self.goto(x, y)
+
+

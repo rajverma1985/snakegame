@@ -1,7 +1,7 @@
 from turtle import Turtle
 
 START_POS = [(0, 0), (-20, 0), (-40, 0)]
-MOVE = 20
+MOVE = 10
 UP = 90
 DOWN = 270
 LEFT = 180

@@ -22,7 +22,6 @@ snake = Snake()
 dot = Dot()
 score = ScoreBoard()
 
-
 screen.listen()
 screen.onkey(snake.up, 'Up')
 screen.onkey(snake.down, 'Down')
@@ -35,10 +34,11 @@ while game_on:
     screen.update()
     time.sleep(0.1)
     snake.move_snake()
-    if snake.head.distance(dot) < 15:
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        game_on = False
+        score.game_over()
+    elif snake.head.distance(dot) < 15:
         score.keep_score()
         dot.move()
-
-
 
 screen.exitonclick()
