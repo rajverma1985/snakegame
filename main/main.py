@@ -39,6 +39,7 @@ def run_game():
         for segs in snake.segments[1:]:
             if snake.head.distance(segs) < 8:
                 game_on = False
+                score.h_score()
                 score.game_over()
     screen.exitonclick()
 
